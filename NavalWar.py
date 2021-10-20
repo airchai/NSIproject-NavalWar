@@ -93,19 +93,19 @@ def check_place(boat:Bateau) -> bool:
 
 
 
-if check_around_boat(katsuragi):    # si ya la place
-    placeBoat(katsuragi)            # pose le bateau
-    pprint(grille)                  # affiche la grid
-else:
-    print('ya pas la place')
+# if check_around_boat(katsuragi):    # si ya la place
+#     placeBoat(katsuragi)            # pose le bateau
+#     pprint(grille)                  # affiche la grid
+# else:
+#     print('ya pas la place')
 
-print('\n')
+# print('\n')
 
-if check_around_boat(ayanami):
-    placeBoat(ayanami)
-    pprint(grille)
-else:
-    print('ya pas la place')
+# if check_around_boat(ayanami):
+#     placeBoat(ayanami)
+#     pprint(grille)
+# else:
+#     print('ya pas la place')
 
 
         
