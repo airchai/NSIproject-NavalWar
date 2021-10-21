@@ -9,7 +9,7 @@ class MyTCPHandler(socketserver.BaseRequestHandler): #cree class mytcpHandler (l
             if not self.data: #quitte si ne sont pas donnees recues 
                 break
             self.data = self.data.strip() #formalise le texte
-            print (str(self.client_address[0]) + " wrote: ") #dis qui a ecris quoi
+            print (str(self.client_address[0]) + " wrote: ","port:",self.client_address[1]) #dis qui a ecris quoi
             print (self.data) #donnees
             print(self.data.decode('utf-8')) #données decodées en UTF-8
             self.request.send(self.data.upper()) #envoies donnees recus en majusucule

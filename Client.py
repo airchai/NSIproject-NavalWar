@@ -3,27 +3,18 @@ import sys
 from time import sleep
 
 HOST, PORT = "localhost", 3288
-data = "hello"
+data = "hello" #donnees a envoyer
 
-sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #def socket
 
-try:
-    sock.connect((HOST, PORT))
-    sock.send(data.encode('utf8'))
-    received = sock.recv(1024)
-    print(received)
 
-    sleep(3)
-
-    sock.send(data.encode('utf8'))
-    received = sock.recv(1024)
-    print(received)
-
-    sleep(3)
-
-    sock.send(data.encode('utf8'))
-    received = sock.recv(1024)
-    print(received)
-
-finally:
-    sock.close()
+sock.connect((HOST, PORT))
+while True:
+    a=input()
+    if a==a:
+        sock.send(data.encode('utf8'))
+        received = sock.recv(1024)
+        print(received)
+        sleep(3)
+    else:
+        sock.close
