@@ -7,7 +7,7 @@ host = '127.0.0.1' #pour instant localhost mais bientot heberge sur pi+ port for
 port = 2004 
 ThreadCount = 0 #compteur de connections
 try:
-    ServerSideSocket.bind((host, port)) # essaye de bind le serveir et si marche pas renvoie erreur 
+    ServerSideSocket.bind((host, port)) # essaye de bind le serveur et si marche pas renvoie erreur 
 except socket.error as e:
     print(str(e))
 
@@ -38,14 +38,26 @@ def multi_threaded_client(connection):
         
     connection.close() #ferme connection quand fini
 
+def start_partie():
+    for every_client in connected:
+        print(f'Message to {every_client}')
+        every_client.send('test all client'.encode())
+    
+connected=[]
 data_list=[]
 while True:
     Client, address = ServerSideSocket.accept() #accepte les connections
     print('Connected to: ' + address[0] + ':' + str(address[1])) #affiche les ip / port des clients connectes 
     start_new_thread(multi_threaded_client, (Client, )) #lance la connection de plusieurs clients sur 1 serveur
     ThreadCount += 1 #ajoute 1 client
+    connected.append(Client)
     print('Thread Number: ' + str(ThreadCount)) #affiche nombre clients connectes
     data_list = list(filter(None, data_list)) #retire vide de la data_list (genere quand client se deconnecte)
     print(data_list) #affiche la data en memoire
+    print(connected)
+    if ThreadCount==2:
+        print('Les clients sont connetctés la partie peut commencer')
+        start_partie()
+        
 
 

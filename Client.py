@@ -3,7 +3,7 @@ import sys
 from time import sleep
 
 HOST, PORT = "localhost", 2004
-data = "hello" #donnees a envoyer
+data = "liste1" #donnees a envoyer
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #def socket
 
@@ -16,6 +16,8 @@ while True:
         received = sock.recv(2048)
         print(received) #afficher reponse serveur
         sleep(3)
-    else:
+    if a=='b':
+        sock.recv(2048) #afficher
+    if a =='c':
         sock.shutdown(1)
         break
