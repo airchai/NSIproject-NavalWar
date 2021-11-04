@@ -59,5 +59,7 @@ def final():
         boat.change_pos()       # position initiale
         check_and_place(boat)   # cest tipar
 
-# pprint(grille)                              # LEZGOOO CA MARCHE
-# print([boat.positions for boat in TEAM])    
+def co_bateaux():
+    final()
+    """ renvoie un liste contenant les positions des bateaux """
+    return [boat.positions for boat in TEAM]        # pour le GUI
