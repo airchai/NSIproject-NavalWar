@@ -54,9 +54,10 @@ def check_and_place(boat:Bateau):
 
 TEAM = [Bateau(r.randint(0,1), len) for len in len_boats]   # créé la liste contenant les bateaux de différentes longueurs
 
-for boat in TEAM:           # pour chaque bateau
-    boat.change_pos()       # position initiale
-    check_and_place(boat)   # cest tipar
+def final():
+    for boat in TEAM:           # pour chaque bateau
+        boat.change_pos()       # position initiale
+        check_and_place(boat)   # cest tipar
 
-pprint(grille)                      # LEZGOOO CA MARCHE
-print([boat.positions for boat in TEAM])
+# pprint(grille)                              # LEZGOOO CA MARCHE
+# print([boat.positions for boat in TEAM])    
