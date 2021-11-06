@@ -86,6 +86,7 @@ create_rectangle(30,430,129,463,c,"blue")
 create_rectangle(139,430,238,463,c,"blue")
 create_rectangle(30,470,96,503,c,"dark green")
 
+#Legende
 tk.Label(root,text='Porte avion',font=('compact', 15, 'normal'),bg='LightBlue1').place(x=200, y=350)
 tk.Label(root,text='Croiseur',font=('compact', 15, 'normal'),bg='LightBlue1').place(x=167, y=390)
 tk.Label(root,text='Sous-marins',font=('compact', 15, 'normal'),bg='LightBlue1').place(x=242, y=430)
