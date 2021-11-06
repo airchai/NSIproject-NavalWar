@@ -92,4 +92,14 @@ tk.Label(root,text='Croiseur',font=('compact', 15, 'normal'),bg='LightBlue1').pl
 tk.Label(root,text='Sous-marins',font=('compact', 15, 'normal'),bg='LightBlue1').place(x=242, y=430)
 tk.Label(root,text='Torpilleur',font=('compact', 15, 'normal'),bg='LightBlue1').place(x=100, y=470)
 
-root.mainloop() #Lance le GUI
+def main():
+    try: 
+       root.mainloop() # start gui
+    except Exception as e:
+        return main()
+
+main()
+
+
+
+
