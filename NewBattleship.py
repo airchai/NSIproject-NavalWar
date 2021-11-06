@@ -28,11 +28,11 @@ def check_around_boat(boat:Bateau):
     """ vérifie les alentours de la position hypothétique du bateau """
     for x in range(
             max((boat.positions[0][0]-1),0),        #anti ListIndexOutOfRange pour min x
-            min((boat.positions[-1][0]+2),9)        #anti ListIndexOutOfRange pour max x
+            min((boat.positions[-1][0]+2),10)        #anti ListIndexOutOfRange pour max x
         ):
         for y in range(
                 max((boat.positions[0][1]-1), 0),   #anti ListIndexOutOfRange pour min y
-                min((boat.positions[-1][1]+2), 9)   #anti ListIndexOutOfRange pour max y
+                min((boat.positions[-1][1]+2), 10)   #anti ListIndexOutOfRange pour max y
             ):
             if grille[y][x] == 1:                   # check si deja bateau
                 return False                        # nope ya deja bateau on skip
