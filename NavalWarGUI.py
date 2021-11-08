@@ -1,10 +1,7 @@
 import tkinter as tk
-from NewBattleship import Bateau
-from NewBattleship import check_around_boat
-from NewBattleship import place_boat
-from NewBattleship import check_and_place
-from NewBattleship import final
-from NewBattleship import co_bateaux
+from NewBattleship import *
+import sys
+sys.setrecursionlimit(5000)         # temp fix
 
 def create_grid(event=None):
     w = c.winfo_width() # longueur de la fenetre
