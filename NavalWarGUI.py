@@ -66,13 +66,15 @@ def placer_bateau_gui_1(liste_bateau):
     """Place les bateaux sur le quadrillage 1"""
     for count,i in enumerate(liste_bateau):
         for f in i:
-            create_rectangle(int(convertisseur_grille_1(f[0],f[1])[0]),int(convertisseur_grille_1(f[0],f[1])[1]),int(convertisseur_grille_1(f[0],f[1])[2]),int(convertisseur_grille_1(f[0],f[1])[3]),c,couleurs[count])
+            create_rectangle(int(convertisseur_grille_1(f[0],f[1])[0]),int(convertisseur_grille_1(f[0],f[1])[1]),
+                             int(convertisseur_grille_1(f[0],f[1])[2]),int(convertisseur_grille_1(f[0],f[1])[3]),c,couleurs[count])
 
 def placer_bateau_gui_2(liste_bateau2):
     """Place les bateaux sur le quadrillage 2"""
     for count,i in enumerate(liste_bateau2):
         for f in i:
-            create_rectangle(int(convertisseur_grille_2(f[0],f[1])[0]),int(convertisseur_grille_2(f[0],f[1])[1]),int(convertisseur_grille_2(f[0],f[1])[2]),int(convertisseur_grille_2(f[0],f[1])[3]),c,couleurs[count])
+            create_rectangle(int(convertisseur_grille_2(f[0],f[1])[0]),int(convertisseur_grille_2(f[0],f[1])[1]),int(convertisseur_grille_2(f[0],f[1])[2]),
+                             int(convertisseur_grille_2(f[0],f[1])[3]),c,couleurs[count])
 
 
 placer_bateau_gui_1(liste_bateau)
