@@ -32,6 +32,7 @@ def create_rectangle(x0, y0, x1,y1, canvasName,color):
     return canvasName.create_rectangle(x0, y0, x1, y1,fill=color)
 
 root = tk.Tk() #creation de la fenetre gui
+root.title('BattleShip grids')
 
 c = tk.Canvas(root, height=500, width=1000, bg='LightBlue1') #taille fenetre et couleur background
 c.pack(fill=tk.BOTH, expand=False) #fait apparaitre les éléments sur le gui
